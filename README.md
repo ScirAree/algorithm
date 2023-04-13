@@ -9,30 +9,4 @@ git push origin master
 然后，使用git merge命令合并远程分支和本地分支。例如，如果你的本地分支为master，可以执行以下命令
 git merge origin/master
 
-一次提交
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 你好
