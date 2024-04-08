@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.szxy.springboot_quickly_szxy.dao.StudentMapper">
+    <!--根据id查询数据-->
+    <select id="selectStu" parameterType="String" resultType="com.szxy.springboot_quickly_szxy.pojo.Stu">
+        select * from stu where id=#{id}
+    </select>
+
+    <!--向表中插入数据-->
+    <insert id="insertStu" parameterType="com.szxy.springboot_quickly_szxy.dao.StudentMapper">
+        insert into stu(id,name,age,gender,clazz) values (#{id},#{name},#{age},#{gender},#{clazz})
+    </insert>
+
+    <!--更新表中数据-->
+    <update id="updateStu" parameterType="com.szxy.springboot_quickly_szxy.pojo.Stu">
+        update stu set name=#{name} where id=#{id}
+    </update>
+
+    <!--删除表中数据-->
+    <delete id="deleteStu" parameterType="String">
+        delete from stu where id=#{id}
+    </delete>
+</mapper>
