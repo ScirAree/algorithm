@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.szxy.springboot_quickly_szxy.dao.StuMapper">
+    <select id="selectStu" parameterType="String" resultType="com.szxy.springboot_quickly_szxy.pojo.Stu">
+        select * from stu where id=#{id}
+    </select>
+
+    <insert id="insertStu" parameterType="com.szxy.springboot_quickly_szxy.pojo.Stu">
+        insert into stu(id,name,age,gender,clazz) values (#{id},#{name},#{age},#{gender},#{clazz})
+    </insert>
+    <update id="updateStu" parameterType="com.szxy.springboot_quickly_szxy.pojo.Stu">
+        update stu set name=#{name} where id=#{id}
+    </update>
+    <delete id="deleteStu" parameterType="String">
+        delete from stu where id=#{id}
+    </delete>
+
+</mapper>
