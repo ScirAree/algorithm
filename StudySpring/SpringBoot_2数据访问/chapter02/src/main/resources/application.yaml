@@ -1,0 +1,11 @@
+#对实体类对象Person进行属性配置
+Person:
+  id: 1
+  name: zhangsan
+  age: 30
+  clazz: one
+  gender: boy
+  hobby: [sing,read,sleep]
+  family: [father,mother]
+  map: {k1: v1,k2: v2}
+  pet: {type: cat, name: tom}
